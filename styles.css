@@ -1,0 +1,169 @@
+/* 1. Global Styles & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* FIXED: Removed the extra 'box-' typo */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    background-color: #2d3436;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* 2. Vertical Layout Configuration */
+main {
+    display: flex;
+    flex-direction: column; /* Stacks sections vertically */
+    gap: 30px;
+    max-width: 900px; 
+    margin: 0 auto;   /* Centers the column on the screen */
+}
+
+section {
+    width: 100%; 
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-top: 5px solid #00b894; /* Professional accent color */
+}
+
+h2 {
+    color: #2d3436;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* 3. Styling the Tables and Lists */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f9f9f9;
+}
+
+code {
+    background-color: #dfe6e9;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #d63031;
+}
+
+/* 4. Formatting the Code Snippet Box & Wrapping Text */
+.code-snippet {
+    margin: 10px 0;
+}
+
+.code-snippet pre {
+    white-space: pre-wrap;       /* Forces text to wrap inside the box */
+    word-wrap: break-word;       
+    overflow-x: auto;            
+    background-color: #2d3436;
+    color: #fab1a0;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* 5. Navigation Bar Styles (Sticky) */
+nav {
+    background-color: #34495e;
+    padding: 15px 0;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    margin-top: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* Adds depth */
+}
+
+nav ul {
+    list-style: none;
+    display: flex; 
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00b894;
+}
+
+/* 6. Visual Aids (Box Model & Specificity) */
+.box-model-visual {
+    margin-top: 20px;
+    font-family: monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.margin-box { background-color: #f9cb9c; padding: 20px; border: 1px dashed #e67e22; text-align: center; }
+.border-box { background-color: #ffe599; padding: 20px; border: 5px solid #f1c40f; }
+.padding-box { background-color: #b6d7a8; padding: 20px; border: 1px dashed #27ae60; }
+.content-box { background-color: #a4c2f4; padding: 40px 20px; border: 1px solid #2980b9; color: #2980b9; }
+
+.label { display: block; margin-bottom: 5px; color: #444; }
+
+strong { color: #e67e22; }
+
+li code {
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 0.95rem;
+}
+
+/* 7. Deployment & Footer */
+.deployment-steps ol { padding-left: 20px; }
+.deployment-steps li { margin-bottom: 10px; }
+
+.note {
+    background-color: #fff3cd;
+    padding: 10px;
+    border-left: 5px solid #ffc107;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+html {
+    scroll-behavior: smooth;
+}

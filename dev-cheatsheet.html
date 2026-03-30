@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Cheat Sheet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Web Development Fundamentals</h1>
+        <p>A reference guide for HTML, CSS, and Deployment</p>
+        <nav>
+            <ul>
+                <li><a href="#html-basics">HTML</a></li>
+                <li><a href="#css-basics">CSS</a></li>
+                <li><a href="#local-dev">Local Dev</a></li>
+                <li><a href="#deployment">Deployment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="html-basics">
+            <h2>1. HTML: Structure, Tables & Semantics</h2>
+            
+            <h3>Building Blocks</h3>
+            <ul>
+                <li><code>&lt;!DOCTYPE html&gt;</code>: Tells the browser this is an HTML5 document.</li>
+                <li><code>&lt;html&gt;</code>: The root element of the page.</li>
+            </ul>
+
+            <h3>Semantic Elements</h3>
+            <p>Using tags that describe their meaning (SEO & Accessibility):</p>
+            <code>&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;footer&gt;</code>
+
+            <h3>HTML Tables</h3>
+            <div class="code-snippet">
+                <pre>
+&lt;table&gt;
+  &lt;tr&gt; &lt;!-- Table Row --&gt;
+    &lt;th&gt;Header&lt;/th&gt; &lt;!-- Table Heading --&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Data&lt;/td&gt; &lt;!-- Table Data/Cell --&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+                </pre>
+            </div>
+        </section>
+
+        <section id="css-basics">
+            <h2>2. CSS: Visuals, Selectors & Positioning</h2>
+
+            <h3>Selectors & Visual Rules</h3>
+            <ul>
+                <li><strong>Universal:</strong> <code>* { box-sizing: border-box; }</code></li>
+                <li><strong>Class vs ID:</strong> Use <code>.className</code> for multiple elements; <code>#idName</code> for one unique element.</li>
+                <li><strong>Specificity:</strong> Inline style &gt; ID &gt; Class &gt; Type.</li>
+            </ul>
+
+            <h3>Display & Positioning</h3>
+            <div class="code-snippet">
+                <pre>
+/* Display */
+display: block;   /* Takes full width */
+display: inline;  /* Only takes content width */
+display: none;    /* Removes from page */
+
+/* Positioning */
+position: relative; /* Stays in flow, can move slightly */
+position: absolute; /* Moves relative to nearest parent */
+position: fixed;    /* Stays on screen during scroll */
+                </pre>
+            </div>
+
+            <h3>The Box Model Reminder</h3>
+            <p>Total Width = Margin + Border + Padding + Content Width.</p>
+            
+            <div class="box-model-visual">
+                <div class="margin-box">
+                    <span class="label">Margin</span>
+                    <div class="border-box">
+                        <span class="label">Border</span>
+                        <div class="padding-box">
+                            <span class="label">Padding</span>
+                            <div class="content-box">
+                                <span class="label">Content</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="local-dev">
+            <h2>3. Developing Locally & The Command Line</h2>
+            <p>Using the Terminal/CLI to manage your project files efficiently.</p>
+
+            <div class="code-snippet">
+                <pre>
+ls      /* List: Show all files in current folder */
+cd ..   /* Change Directory: Move up one folder */
+mkdir   /* Make Directory: Create a new folder */
+touch   /* Create a new file (e.g., touch index.html) */
+pwd     /* Print Working Directory: Where am I? */
+                </pre>
+            </div>
+
+            <h3>Local Workflow Tips</h3>
+            <ul>
+                <li><strong>Live Server:</strong> Use a VS Code extension to see changes instantly.</li>
+                <li><strong>File Structure:</strong> Always keep your <code>index.html</code> in the root folder.</li>
+                <li><strong>Browser Tools:</strong> Press <code>F12</code> or <code>Cmd+Opt+I</code> to debug CSS.</li>
+            </ul>
+        </section>
+
+        <section id="deployment">
+            <h2>4. Deployment Checklist</h2>
+            <p>Follow these steps to take your site live:</p>
+            
+            <div class="deployment-steps">
+                <ol>
+                    <li><strong>Validate:</strong> Check your HTML/CSS for unclosed tags.</li>
+                    <li><strong>Relative Paths:</strong> Ensure images use <code>src="./img/photo.jpg"</code>.</li>
+                    <li><strong>GitHub:</strong> Initialize a repository and push your code.</li>
+                    <li><strong>GitHub Pages:</strong> Go to <em>Settings > Pages</em> and select the 'main' branch.</li>
+                </ol>
+            </div>
+            
+            <p class="note"><strong>Pro-Tip:</strong> Always test your live link on a mobile phone to check responsiveness!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built By Maisha Freddy Seabela For Web CheatSheet &copy; 2026</p>
+    </footer>
+
+</body>
+</html>
